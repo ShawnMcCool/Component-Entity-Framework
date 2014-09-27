@@ -1,15 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PunchGirl/PunchGirl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PunchGirl/ProtoType.cs">
     <Files>
-      <File FileName="PunchGirl/ProtoType.cs" Line="16" Column="27" />
+      <File FileName="PunchGirl/ProtoType.cs" Line="26" Column="79" />
       <File FileName="PunchGirl/Program.cs" Line="9" Column="21" />
-      <File FileName="PunchGirl/PunchGirl.cs" Line="1" Column="1" />
+      <File FileName="PunchGirl/PunchGirl.cs" Line="18" Column="77" />
+      <File FileName="PunchGirl/IsDrawableSprite.cs" Line="8" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="PunchGirl" expanded="True" />
+        <State expanded="True">
+          <Node name="PunchGirl" expanded="True" selected="True">
+            <Node name="Content" expanded="True">
+              <Node name="Graphics" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

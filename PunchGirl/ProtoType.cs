@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
-
 #endregion
 
 namespace PunchGirl
@@ -13,16 +12,18 @@ namespace PunchGirl
 	/// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Game
+    public class ProtoType : Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;		
+        SpriteBatch spriteBatch;
+		PunchGirl girl;
 
-        public Game1()
+        public ProtoType()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";	            
-			graphics.IsFullScreen = true;		
+			graphics.IsFullScreen = false;
+			girl = new PunchGirl(Content.Load<Texture2D>("Graphics\\player.png"), new Vector2(100, 100));
         }
 
         /// <summary>
@@ -59,10 +60,10 @@ namespace PunchGirl
         {
             // For Mobile devices, this logic will close the Game when the Back button is pressed
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-			{
 				Exit();
-			}
-            // TODO: Add your update logic here			
+
+            // TODO: Add your update logic here
+
             base.Update(gameTime);
         }
 
@@ -74,8 +75,13 @@ namespace PunchGirl
         {
            	graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 		
+			spriteBatch.Begin();
+
             //TODO: Add your drawing code here
-            
+			girl.Draw(spriteBatch);
+
+			spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }

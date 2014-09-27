@@ -8,7 +8,7 @@ namespace PunchGirl
 {
     static class Program
     {
-        private static Game1 game;
+        private static ProtoType game;
 
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace PunchGirl
         [STAThread]
         static void Main()
         {
-            game = new Game1();
+            game = new ProtoType();
             game.Run();
         }
     }
