@@ -14,6 +14,10 @@ namespace PunchGirl
 			this.texture = texture;
 			this.position = position;
 		}
+
+		public void Draw (SpriteBatch spriteBatch)
+		{
+			spriteBatch.Draw (texture, position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+		}
 	}
 }
-
