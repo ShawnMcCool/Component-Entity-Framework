@@ -1,21 +1,27 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PunchGirl/ProtoType.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngine/Entity.cs">
     <Files>
-      <File FileName="PunchGirl/ProtoType.cs" Line="26" Column="79" />
-      <File FileName="PunchGirl/Program.cs" Line="9" Column="21" />
-      <File FileName="PunchGirl/PunchGirl.cs" Line="18" Column="77" />
-      <File FileName="PunchGirl/IsDrawableSprite.cs" Line="8" Column="5" />
+      <File FileName="ComponentEngine/Component.cs" Line="7" Column="22" />
+      <File FileName="ComponentsTests/ComponentTests.cs" Line="11" Column="31" />
+      <File FileName="ComponentsTests/EntityTests.cs" Line="20" Column="14" />
+      <File FileName="ComponentEngine/Entity.cs" Line="14" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="PunchGirl" expanded="True" selected="True">
-            <Node name="Content" expanded="True">
-              <Node name="Graphics" expanded="True" />
-            </Node>
-          </Node>
+        <State expanded="True" selected="True">
+          <Node name="ComponentEngine" expanded="True" />
+          <Node name="ComponentsTests" expanded="True" />
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
