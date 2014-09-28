@@ -1,17 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngine/Entity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngine/Component.cs">
     <Files>
       <File FileName="ComponentEngine/Component.cs" Line="7" Column="22" />
-      <File FileName="ComponentsTests/ComponentTests.cs" Line="11" Column="31" />
+      <File FileName="ComponentsTests/ComponentTests.cs" Line="9" Column="3" />
       <File FileName="ComponentsTests/EntityTests.cs" Line="20" Column="14" />
-      <File FileName="ComponentEngine/Entity.cs" Line="14" Column="30" />
+      <File FileName="ComponentEngine/Entity.cs" Line="6" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True" selected="True">
           <Node name="ComponentEngine" expanded="True" />
-          <Node name="ComponentsTests" expanded="True" />
+          <Node name="ComponentEngineTests" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

@@ -16,8 +16,9 @@ namespace ComponentsTests
 		[Test()]
 		public void TestCanAddComponent() {
 			var entity = new Entity();
-			entity.AddComponent(new Component());
-			entity.GetComponent<Component>();
+			Component mock = Rhino.Mocks.MockRepository.GenerateMock<Component>();
+			entity.AddComponent(mock);
+			Assert.IsInstanceOf<Component>(entity.GetComponent<Component>());
 		}
 	}
 

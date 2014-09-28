@@ -2,10 +2,9 @@ using System;
 
 namespace ComponentEngine
 {
-	public class Component
+	public interface Component
 	{
-		public Component() {
-		}
+		void FrameStep();
 	}
 }
 

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PunchGirl", "PunchGirl\PunchGirl.csproj", "{057C8D55-DFBA-4676-A88C-BB690F9575F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentEngineTests", "ComponentsTests\ComponentEngineTests.csproj", "{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentEngine", "ComponentEngine\ComponentEngine.csproj", "{E4AB9752-1BD1-4BCB-9686-65742C5296FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentEngineTests", "ComponentEngineTests\ComponentEngineTests.csproj", "{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

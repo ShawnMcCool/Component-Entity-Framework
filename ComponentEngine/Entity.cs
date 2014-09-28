@@ -11,9 +11,10 @@ namespace ComponentEngine
 			components.Add(component);
 		}
 		public T GetComponent<T>() {
-			foreach (var component in components)
-				if (component.GetType() == T)
-					return (T) component;
+			foreach (var component in components) {
+				if (component is T)
+					return (T)(object) component;
+			}
 			return default(T);
 		}
 	}
