@@ -2,48 +2,46 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using ComponentEngine;
+using Moq;
 
 namespace ComponentsTests
 {
 	[TestFixture()]
 	public class EntityTests
 	{
-		[Test()]
-		public void TestCanCreate() {
-			Assert.IsInstanceOf<Entity>(new Entity());
+		Entity entity;
+		Mock<Component> mockComponent;
+
+		[SetUp] public void Init() {
+			entity = new Entity();
+			mockComponent = new Mock<Component>();
 		}
 
-		[Test()]
-		public void TestCanAddComponent() {
-			var entity = new Entity();
-			Component mock = Rhino.Mocks.MockRepository.GenerateMock<Component>();
-			entity.AddComponent(mock);
+		[Test()] public void TestCanCreate() {
+			Assert.IsInstanceOf<Entity>(entity);
+		}
+
+		[Test()] public void TestCanAddComponent() {
+			entity.AddComponent(mockComponent.Object);
+
 			Assert.IsInstanceOf<Component>(entity.GetComponent<Component>());
 		}
+
+		[Test()] public void TestCanBootComponents() {
+			entity.AddComponent(mockComponent.Object);
+			entity.Boot();
+
+			mockComponent.Verify(component => component.Boot(), Times.Once());
+		}
+
+		[Test()] public void TestCanUpdateComponents() {
+			entity.AddComponent(mockComponent.Object);
+			entity.Boot();
+			entity.Update();
+			entity.Update();
+
+			mockComponent.Verify(component => component.Update(), Times.Exactly(2));
+		}
 	}
-
-//	class Entity {
-//		List<Component> components = new List<Component>();
-//		public void AddComponent(Component component) {
-//			component.BindEntity(this);
-//			components.Add(component);
-//		}
-//		public Component GetComponent(String name) {
-//			foreach (Component component in components)
-//				if (component.Name == name)
-//					return component;
-//			return null;
-//		}
-//	}
-
-//	class Component {
-//		Entity entity;
-//		public void BindEntity(Entity entity) {
-//			this.entity = entity;
-//		}
-//		public String Name {
-//			get { return "Component"; }
-//		}
-//	}
 }
 

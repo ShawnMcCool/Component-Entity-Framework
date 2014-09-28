@@ -7,10 +7,17 @@ namespace ComponentsTests
 	[TestFixture()]
 	public class ComponentTests
 	{
-		[Test()]
-		public void TestCanCreate() {
-			Assert.IsInstanceOf<Component>(new Component());
+		ComponentBase component;
+
+		[SetUp] public void Init() {
+			component = new ComponentBase();
 		}
+
+		[Test()] public void TestCanCreate() {
+			Assert.IsInstanceOf<ComponentBase>(component);
+		}
+
+
 	}
 }
 

@@ -10,12 +10,20 @@ namespace ComponentEngine
 		public void AddComponent(Component component) {
 			components.Add(component);
 		}
+
 		public T GetComponent<T>() {
-			foreach (var component in components) {
+			foreach (var component in components)
 				if (component is T)
 					return (T)(object) component;
-			}
 			return default(T);
+		}
+
+		public void Boot() {
+			components.ForEach(c => c.Boot());
+		}
+
+		public void Update() {
+			components.ForEach(c => c.Update());
 		}
 	}
 }

@@ -33,8 +33,8 @@
     <Reference Include="nunit.framework">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Rhino.Mocks">
-      <HintPath>..\Libraries\Rhino.Mocks.dll</HintPath>
+    <Reference Include="Moq">
+      <HintPath>..\Libraries\Moq.4.0.10827\NET35\Moq.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityTests.cs" />
+    <Compile Include="ComponentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ComponentEngine\ComponentEngine.csproj">

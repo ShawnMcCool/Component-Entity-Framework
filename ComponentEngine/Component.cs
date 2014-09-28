@@ -4,7 +4,9 @@ namespace ComponentEngine
 {
 	public interface Component
 	{
-		void FrameStep();
+		void Boot();
+		bool HasBooted();
+		void Update();
 	}
 }
 
