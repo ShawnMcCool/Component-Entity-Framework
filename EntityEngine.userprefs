@@ -1,16 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngineTests/ComponentTests.cs">
-    <Files>
-      <File FileName="ComponentEngineTests/ComponentTests.cs" Line="13" Column="16" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="ComponentEngine" expanded="True" />
           <Node name="ComponentEngineTests" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="ComponentTests.cs" selected="True" />
           </Node>
         </State>
       </Pad>
