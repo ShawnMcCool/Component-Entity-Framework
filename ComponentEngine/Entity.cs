@@ -5,9 +5,14 @@ namespace ComponentEngine
 {
 	public class Entity
 	{
-		private List<Component> components = new List<Component>();
+		private String type;
+		private List<IComponent> components = new List<IComponent>();
 
-		public void AddComponent(Component component) {
+		public Entity(String type) {
+			this.type = type;
+		}
+
+		public void AddComponent(IComponent component) {
 			components.Add(component);
 		}
 

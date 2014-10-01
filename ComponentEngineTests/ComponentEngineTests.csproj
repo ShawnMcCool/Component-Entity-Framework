@@ -40,15 +40,22 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Stubs\" />
+    <Folder Include="XML\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityTests.cs" />
     <Compile Include="ComponentTests.cs" />
+    <Compile Include="EntityManagerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ComponentEngine\ComponentEngine.csproj">
       <Project>{E4AB9752-1BD1-4BCB-9686-65742C5296FD}</Project>
       <Name>ComponentEngine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XML\Prefabs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

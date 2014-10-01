@@ -1,0 +1,4 @@
+<shawn>
+    <health max="30"/>
+    <walk speed="10"/>
+</shawn>

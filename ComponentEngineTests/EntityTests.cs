@@ -10,11 +10,11 @@ namespace ComponentsTests
 	public class EntityTests
 	{
 		Entity entity;
-		Mock<Component> mockComponent;
+		Mock<IComponent> mockComponent;
 
 		[SetUp] public void Init() {
-			entity = new Entity();
-			mockComponent = new Mock<Component>();
+			entity = new Entity("testEntity");
+			mockComponent = new Mock<IComponent>();
 		}
 
 		[Test()] public void TestCanCreate() {
@@ -24,7 +24,7 @@ namespace ComponentsTests
 		[Test()] public void TestCanAddComponent() {
 			entity.AddComponent(mockComponent.Object);
 
-			Assert.IsInstanceOf<Component>(entity.GetComponent<Component>());
+			Assert.IsInstanceOf<IComponent>(entity.GetComponent<IComponent>());
 		}
 
 		[Test()] public void TestCanBootComponents() {

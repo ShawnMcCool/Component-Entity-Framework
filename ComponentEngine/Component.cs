@@ -2,11 +2,23 @@ using System;
 
 namespace ComponentEngine
 {
-	public interface Component
+	public class Component : IComponent
 	{
-		void Boot();
-		bool HasBooted();
-		void Update();
+		bool hasBooted = false;
+
+		public void Boot() {
+			hasBooted = true;
+		}
+
+		public bool HasBooted() {
+			return hasBooted;
+		}
+
+		public void Update() {
+			if (! hasBooted)
+				throw new ComponentNotBooted();
+		}
+
 	}
 }
 

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentEngine", "Componen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentEngineTests", "ComponentEngineTests\ComponentEngineTests.csproj", "{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleGame", "ExampleGame\ExampleGame.csproj", "{CB7F8909-8D71-4EF6-8051-0BECEB16F9E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}.Debug|x86.Build.0 = Debug|Any CPU
 		{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}.Release|x86.ActiveCfg = Release|Any CPU
 		{8EE25C06-70D3-4688-95B2-CE5DF50D1A90}.Release|x86.Build.0 = Release|Any CPU
+		{CB7F8909-8D71-4EF6-8051-0BECEB16F9E1}.Debug|x86.ActiveCfg = Debug|x86
+		{CB7F8909-8D71-4EF6-8051-0BECEB16F9E1}.Debug|x86.Build.0 = Debug|x86
+		{CB7F8909-8D71-4EF6-8051-0BECEB16F9E1}.Release|x86.ActiveCfg = Release|x86
+		{CB7F8909-8D71-4EF6-8051-0BECEB16F9E1}.Release|x86.Build.0 = Release|x86
 		{E4AB9752-1BD1-4BCB-9686-65742C5296FD}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E4AB9752-1BD1-4BCB-9686-65742C5296FD}.Debug|x86.Build.0 = Debug|Any CPU
 		{E4AB9752-1BD1-4BCB-9686-65742C5296FD}.Release|x86.ActiveCfg = Release|Any CPU
