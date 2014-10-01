@@ -10,7 +10,7 @@ namespace ComponentsTests
 		Component component;
 
 		[SetUp] public void Init() {
-			component = new Component();
+			component = new Component(new ComponentArguments());
 		}
 
 		[Test()] public void TestCanCreate() {

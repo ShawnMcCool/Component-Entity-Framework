@@ -38,7 +38,6 @@
     <Compile Include="Entity.cs" />
     <Compile Include="ComponentNotBooted.cs" />
     <Compile Include="Component.cs" />
-    <Compile Include="IComponent.cs" />
     <Compile Include="EntityManager.cs" />
     <Compile Include="EntityNotFoundInDefinition.cs" />
     <Compile Include="ComponentArguments.cs" />

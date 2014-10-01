@@ -2,11 +2,13 @@ using System;
 
 namespace ComponentEngine
 {
-	public class Component : IComponent
+	public class Component
 	{
 		bool hasBooted = false;
 
-		public void Boot() {
+		public Component(ComponentArguments arguments) {}
+
+		virtual public void Boot() {
 			hasBooted = true;
 		}
 
@@ -14,7 +16,7 @@ namespace ComponentEngine
 			return hasBooted;
 		}
 
-		public void Update() {
+		virtual public void Update() {
 			if (! hasBooted)
 				throw new ComponentNotBooted();
 		}

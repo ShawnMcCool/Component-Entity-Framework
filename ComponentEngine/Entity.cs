@@ -6,13 +6,13 @@ namespace ComponentEngine
 	public class Entity
 	{
 		private String type;
-		private List<IComponent> components = new List<IComponent>();
+		private List<Component> components = new List<Component>();
 
 		public Entity(String type) {
 			this.type = type;
 		}
 
-		public void AddComponent(IComponent component) {
+		public void AddComponent(Component component) {
 			components.Add(component);
 		}
 
