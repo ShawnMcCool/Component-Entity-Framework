@@ -46,6 +46,7 @@
     <Compile Include="EntityTests.cs" />
     <Compile Include="ComponentTests.cs" />
     <Compile Include="EntityManagerTests.cs" />
+    <Compile Include="ComponentArgumentsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ComponentEngine\ComponentEngine.csproj">

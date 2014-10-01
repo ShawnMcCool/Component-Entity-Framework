@@ -41,6 +41,8 @@
     <Compile Include="IComponent.cs" />
     <Compile Include="EntityManager.cs" />
     <Compile Include="EntityNotFoundInDefinition.cs" />
+    <Compile Include="ComponentArguments.cs" />
+    <Compile Include="ComponentArgumentNotFound.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

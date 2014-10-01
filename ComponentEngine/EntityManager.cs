@@ -23,9 +23,13 @@ namespace ComponentEngine
 			Entity entity = new Entity(name);
 
 			foreach (XmlNode componentNode in prefabDefinition.ChildNodes) {
-
+				var componentArguments = new ComponentArguments();
+				XmlAttributeCollection attributes = componentNode.Attributes;
+				foreach (XmlAttribute attr in attributes) {
+						componentArguments.Add(attr.Name, attr.Value);
+				}
+				entity.AddComponent(new Component(componentArguments));
 			}
-
 
 			return entity;
 		}
