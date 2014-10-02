@@ -10,7 +10,7 @@ namespace ComponentsTests
         EntityBuilder entityBuilder;
 
         [SetUp] public void Init() {
-            entityBuilder = new EntityBuilder();
+            entityBuilder = new EntityBuilder("XML/Prefabs.xml");
         }
 
         [Test()] public void TestCanBuild() {

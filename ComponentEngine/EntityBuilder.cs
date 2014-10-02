@@ -7,6 +7,12 @@ namespace ComponentEngine
 {
     public class EntityBuilder
     {
+        private String prefabPath;
+
+        public EntityBuilder(String prefabPath) {
+            this.prefabPath = prefabPath;
+        }
+
         public Entity Build(String name) {
             Entity entity = new Entity(name);
             foreach (var component in getPrefabComponents(getPrefabDefinition(name)))
@@ -42,7 +48,7 @@ namespace ComponentEngine
         }
 
         string getPrefabXml() {
-            return System.IO.File.ReadAllText("XML/Prefabs.xml");
+            return System.IO.File.ReadAllText(prefabPath);
         }
     }
 }
