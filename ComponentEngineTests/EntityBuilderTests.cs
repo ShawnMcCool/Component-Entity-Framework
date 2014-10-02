@@ -5,16 +5,16 @@ using ComponentEngine;
 namespace ComponentsTests
 {
     [TestFixture()]
-    public class EntityManagerTests
+    public class EntityBuilderTests
     {
-        EntityManager entityManager;
+        EntityBuilder entityBuilder;
 
         [SetUp] public void Init() {
-            entityManager = new EntityManager();
+            entityBuilder = new EntityBuilder();
         }
 
         [Test()] public void TestCanBuild() {
-            entityManager.Build("shawn");
+            entityBuilder.Build("shawn");
         }
     }
 }

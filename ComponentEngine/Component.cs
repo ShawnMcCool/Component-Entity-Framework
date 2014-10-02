@@ -6,8 +6,7 @@ namespace ComponentEngine
     {
         bool hasBooted = false;
 
-        public Component(ComponentArguments arguments) {
-        }
+        public Component(ComponentArguments arguments) {}
 
         virtual public void Boot() {
             hasBooted = true;
