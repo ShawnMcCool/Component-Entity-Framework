@@ -2,25 +2,25 @@ using System;
 
 namespace ComponentEngine
 {
-	public class Component
-	{
-		bool hasBooted = false;
+    public class Component
+    {
+        bool hasBooted = false;
 
-		public Component(ComponentArguments arguments) {}
+        public Component(ComponentArguments arguments) {
+        }
 
-		virtual public void Boot() {
-			hasBooted = true;
-		}
+        virtual public void Boot() {
+            hasBooted = true;
+        }
 
-		public bool HasBooted() {
-			return hasBooted;
-		}
+        public bool HasBooted() {
+            return hasBooted;
+        }
 
-		virtual public void Update() {
-			if (! hasBooted)
-				throw new ComponentNotBooted();
-		}
-
-	}
+        virtual public void Update() {
+            if (! hasBooted)
+                throw new ComponentNotBooted();
+        }
+    }
 }
 

@@ -2,11 +2,10 @@ using System;
 
 namespace ComponentEngine
 {
-	public class EntityNotFoundInDefinition : Exception
-	{
-		public EntityNotFoundInDefinition()
-		{
-		}
-	}
+    public class EntityNotFoundInDefinition : Exception
+    {
+        public EntityNotFoundInDefinition() {
+        }
+    }
 }
 

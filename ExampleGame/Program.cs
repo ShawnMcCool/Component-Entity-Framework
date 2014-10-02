@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 #endregion
-
 namespace ExampleGame
 {
     static class Program
@@ -14,8 +13,7 @@ namespace ExampleGame
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
             game = new Game1();
             game.Run();
         }

@@ -1,22 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngine/EntityManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComponentEngineTests/XML/Prefabs.xml">
     <Files>
-      <File FileName="ComponentEngine/Component.cs" Line="20" Column="4" />
-      <File FileName="ComponentEngineTests/EntityTests.cs" Line="40" Column="20" />
-      <File FileName="ComponentEngineTests/ComponentTests.cs" Line="26" Column="55" />
-      <File FileName="ComponentEngine/IComponent.cs" Line="6" Column="3" />
-      <File FileName="ComponentEngineTests/EntityManagerTests.cs" Line="14" Column="4" />
-      <File FileName="ComponentEngine/EntityManager.cs" Line="10" Column="34" />
-      <File FileName="ExampleGame/EntityDefinitions.xml" Line="1" Column="1" />
+      <File FileName="ComponentEngine/Component.cs" Line="1" Column="1" />
+      <File FileName="ComponentEngine/ComponentArgumentNotFound.cs" Line="1" Column="1" />
+      <File FileName="ComponentEngine/ComponentArguments.cs" Line="1" Column="1" />
+      <File FileName="ComponentEngine/ComponentNotBooted.cs" Line="1" Column="1" />
+      <File FileName="ComponentEngine/Entity.cs" Line="30" Column="10" />
+      <File FileName="ComponentEngine/EntityManager.cs" Line="34" Column="1" />
+      <File FileName="ComponentEngine/EntityNotFoundInDefinition.cs" Line="1" Column="1" />
+      <File FileName="ComponentEngineTests/XML/Prefabs.xml" Line="3" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="ComponentEngine" expanded="True" selected="True">
-            <Node name="References" expanded="True" />
+        <State expanded="True" selected="True">
+          <Node name="ComponentEngine" expanded="True" />
+          <Node name="ComponentEngineTests" expanded="True">
+            <Node name="XML" expanded="True" />
           </Node>
-          <Node name="ComponentEngineTests" expanded="True" />
           <Node name="ExampleGame" expanded="True" />
         </State>
       </Pad>

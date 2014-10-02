@@ -6,42 +6,46 @@ using Moq;
 
 namespace ComponentsTests
 {
-	[TestFixture()]
-	public class EntityTests
-	{
-		Entity entity;
-		Mock<Component> mockComponent;
+    [TestFixture()]
+    public class EntityTests
+    {
+        Entity entity;
+        Mock<Component> mockComponent;
 
-		[SetUp] public void Init() {
-			entity = new Entity("testEntity");
-			mockComponent = new Mock<Component>(new ComponentArguments());
-		}
+        [SetUp] public void Init() {
+            entity = new Entity("testEntity");
+            mockComponent = new Mock<Component>(new ComponentArguments());
+        }
 
-		[Test()] public void TestCanCreate() {
-			Assert.IsInstanceOf<Entity>(entity);
-		}
+        [Test()] public void TestCanCreate() {
+            Assert.IsInstanceOf<Entity>(entity);
+        }
 
-		[Test()] public void TestCanAddComponent() {
-			entity.AddComponent(mockComponent.Object);
+        [Test()] public void TestCanAddComponent() {
+            entity.AddComponent(mockComponent.Object);
 
-			Assert.IsInstanceOf<Component>(entity.GetComponent<Component>());
-		}
+            Assert.IsInstanceOf<Component>(entity.GetComponent<Component>());
+        }
 
-		[Test()] public void TestCanBootComponents() {
-			entity.AddComponent(mockComponent.Object);
-			entity.Boot();
+        [Test()] public void TestCantGetNonexistentComponent() {
+            Assert.IsNull(entity.GetComponent<Component>());
+        }
 
-			mockComponent.Verify(component => component.Boot(), Times.Once());
-		}
+        [Test()] public void TestCanBootComponents() {
+            entity.AddComponent(mockComponent.Object);
+            entity.Boot();
 
-		[Test()] public void TestCanUpdateComponents() {
-			entity.AddComponent(mockComponent.Object);
-			entity.Boot();
-			entity.Update();
-			entity.Update();
+            mockComponent.Verify(component => component.Boot(), Times.Once());
+        }
 
-			mockComponent.Verify(component => component.Update(), Times.Exactly(2));
-		}
-	}
+        [Test()] public void TestCanUpdateComponents() {
+            entity.AddComponent(mockComponent.Object);
+            entity.Boot();
+            entity.Update();
+            entity.Update();
+
+            mockComponent.Verify(component => component.Update(), Times.Exactly(2));
+        }
+    }
 }
 

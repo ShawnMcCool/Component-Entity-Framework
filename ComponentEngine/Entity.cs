@@ -1,35 +1,40 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace ComponentEngine
 {
-	public class Entity
-	{
-		private String type;
-		private List<Component> components = new List<Component>();
+    public class Entity
+    {
+        private String type;
+        private List<Component> components = new List<Component>();
 
-		public Entity(String type) {
-			this.type = type;
-		}
+        public Entity(String type) {
+            this.type = type;
+        }
 
-		public void AddComponent(Component component) {
-			components.Add(component);
-		}
+        public String Type { 
+            get { return type; }
+        }
 
-		public T GetComponent<T>() {
-			foreach (var component in components)
-				if (component is T)
-					return (T)(object) component;
-			return default(T);
-		}
+        public void AddComponent(Component component) {
+            components.Add(component);
+        }
 
-		public void Boot() {
-			components.ForEach(c => c.Boot());
-		}
+        public T GetComponent<T>() {
+            foreach (var component in components)
+                if (component is T)
+                    return (T)(object)component;
+            return default(T);
+        }
 
-		public void Update() {
-			components.ForEach(c => c.Update());
-		}
-	}
+        public void Boot() {
+            components.ForEach(c => c.Boot());
+        }
+
+        public void Update() {
+            components.ForEach(c => c.Update());
+        }
+    }
 }
 

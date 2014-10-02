@@ -4,30 +4,30 @@ using ComponentEngine;
 
 namespace ComponentsTests
 {
-	[TestFixture()]
-	public class ComponentTests
-	{
-		Component component;
+    [TestFixture()]
+    public class ComponentTests
+    {
+        Component component;
 
-		[SetUp] public void Init() {
-			component = new Component(new ComponentArguments());
-		}
+        [SetUp] public void Init() {
+            component = new Component(new ComponentArguments());
+        }
 
-		[Test()] public void TestCanCreate() {
-			Assert.IsInstanceOf<Component>(component);
-		}
+        [Test()] public void TestCanCreate() {
+            Assert.IsInstanceOf<Component>(component);
+        }
 
-		[Test()] public void TestCanBoot() {
-			Assert.IsFalse(component.HasBooted());
-			component.Boot();
-			Assert.IsTrue(component.HasBooted());
-		}
+        [Test()] public void TestCanBoot() {
+            Assert.IsFalse(component.HasBooted());
+            component.Boot();
+            Assert.IsTrue(component.HasBooted());
+        }
 
-		[Test()] public void TestCanNotUpdateWithoutBoot() {
-			Assert.Throws<ComponentNotBooted>(
-				delegate { component.Update(); }
-			);
-		}
-	}
+        [Test()] public void TestCanNotUpdateWithoutBoot() {
+            Assert.Throws<ComponentNotBooted>(
+                () => component.Update()
+            );
+        }
+    }
 }
 
