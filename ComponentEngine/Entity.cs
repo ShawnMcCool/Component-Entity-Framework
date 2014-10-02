@@ -6,8 +6,8 @@ namespace ComponentEngine
 {
     public class Entity
     {
-        private String type;
-        private List<Component> components = new List<Component>();
+        String type;
+        List<Component> components = new List<Component>();
 
         public Entity(String type) {
             this.type = type;

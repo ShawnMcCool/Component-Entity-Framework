@@ -7,7 +7,7 @@ namespace ComponentEngine
 {
     public class EntityBuilder
     {
-        private String prefabPath;
+        String prefabPath;
 
         public EntityBuilder(String prefabPath) {
             this.prefabPath = prefabPath;

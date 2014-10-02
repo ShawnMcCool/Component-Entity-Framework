@@ -5,7 +5,7 @@ namespace ComponentEngine
 {
     public class ComponentArguments
     {
-        private Dictionary<String, String> arguments = new Dictionary<String, String>();
+        Dictionary<String, String> arguments = new Dictionary<String, String>();
 
         public void Add(String key, String value) {
             arguments.Add(key, value);
