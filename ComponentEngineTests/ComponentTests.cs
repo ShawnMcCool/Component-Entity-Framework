@@ -10,7 +10,7 @@ namespace ComponentsTests
         Component component;
 
         [SetUp] public void Init() {
-            component = new Component(new ComponentArguments());
+            component = new Component();
         }
 
         [Test()] public void TestCanCreate() {
@@ -18,9 +18,9 @@ namespace ComponentsTests
         }
 
         [Test()] public void TestCanBoot() {
-            Assert.IsFalse(component.HasBooted());
+            Assert.IsFalse(component.HasBooted);
             component.Boot();
-            Assert.IsTrue(component.HasBooted());
+            Assert.IsTrue(component.HasBooted);
         }
 
         [Test()] public void TestCanNotUpdateWithoutBoot() {

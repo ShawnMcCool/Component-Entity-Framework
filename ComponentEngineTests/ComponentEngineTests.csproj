@@ -39,14 +39,15 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Stubs\" />
     <Folder Include="XML\" />
+    <Folder Include="Doubles\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityTests.cs" />
     <Compile Include="ComponentTests.cs" />
     <Compile Include="ComponentArgumentsTests.cs" />
     <Compile Include="EntityBuilderTests.cs" />
+    <Compile Include="Doubles\WalkComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ComponentEngine\ComponentEngine.csproj">

@@ -14,7 +14,7 @@ namespace ComponentsTests
 
         [SetUp] public void Init() {
             entity = new Entity("testEntity");
-            mockComponent = new Mock<Component>(new ComponentArguments());
+            mockComponent = new Mock<Component>();
         }
 
         [Test()] public void TestCanCreate() {

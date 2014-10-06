@@ -29,8 +29,13 @@ namespace ComponentEngine
         List<Component> getPrefabComponents(XmlNode prefabDefinition) {
             var components = new List<Component>();
             foreach (XmlNode componentNode in prefabDefinition.ChildNodes)
-                components.Add(new Component(getComponentArguments(componentNode)));
+                components.Add(buildComponent(""));
             return components;
+        }
+
+        Component buildComponent(String name) {
+            //new Component(getComponentArguments(componentNode))
+            return (Component) Activator.CreateInstance(Type.GetType("SomeNamespace.SomeClassName"));
         }
 
         ComponentArguments getComponentArguments(XmlNode node) {

@@ -4,20 +4,21 @@ namespace ComponentEngine
 {
     public class Component
     {
-        bool hasBooted = false;
+        public Component() {}
 
-        public Component(ComponentArguments arguments) {}
+        virtual public void SetArguments(ComponentArguments arguments) {}
 
         virtual public void Boot() {
-            hasBooted = true;
+            HasBooted = true;
         }
 
-        public bool HasBooted() {
-            return hasBooted;
+        public bool HasBooted {
+            get;
+            set;
         }
 
         virtual public void Update() {
-            if (! hasBooted)
+            if (! HasBooted)
                 throw new ComponentNotBooted();
         }
     }
